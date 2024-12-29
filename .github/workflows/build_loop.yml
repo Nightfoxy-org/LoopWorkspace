@@ -284,7 +284,6 @@ jobs:
           future_carbs_4h \
           override_sens \
           now_line \
-          no_auth \
           watch_title \
           2hlollipop \
           meal_days \

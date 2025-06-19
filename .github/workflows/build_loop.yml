@@ -286,24 +286,6 @@ jobs:
           # The lines below add the customizations listed using the CustomizationSelect script
           # The "" is a continuation character 
           #   the line following a "" should not be blank
-          echo "Downloading code to support 15 Minute Remote Passwords"
-          cd Loop
-          git remote add gestrich https://github.com/gestrich/Loop 
-          git fetch gestrich bugfix/2024-08-expired-command-10-19-24
-          git cherry-pick fetch_head;
-          cd ..
-          cd LoopKit
-          git remote add gestrich https://github.com/gestrich/LoopKit
-          git fetch gestrich bugfix/2024-08-expired-command-10-19-24
-          git cherry-pick fetch_head;
-          cd ..
-          cd NightscoutService
-          git remote add gestrich https://github.com/gestrich/NightscoutService
-          git fetch gestrich bugfix/2024-08-expired-command-10-19-24
-          git cherry-pick fetch_head;
-          cd ..
-          git add .; 
-          git commit -m "Added 15 minute remote password patches"     
           /bin/bash -c "$(curl -fsSL \
           https://raw.githubusercontent.com/loopandlearn/lnl-scripts/main/CustomizationSelect.sh)" \
           future_carbs_4h \
@@ -315,7 +297,8 @@ jobs:
           profiles \
           basal_lock \
           live_activity \
-          negative_insulin 
+          negative_insulin \
+          remote_window
 
           # the final customization listed above CANNOT have a continuation character
           # more customizations can be pasted after this line

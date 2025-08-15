@@ -303,6 +303,9 @@ jobs:
 
           # the final customization listed above CANNOT have a continuation character
           # more customizations can be pasted after this line
+          # LoopKit: LoopKitUI\CarbKit\FoodEmojiDataSource.swift: Food Emoji update
+          curl https://github.com/Nightfoxy-org/LoopKit/commit/aeb7296be3a2e20e79832ed30b88280013a9bc3b.patch | git apply -v --directory=LoopKit
+          
       # Patch Fastlane Match to not print tables
       - name: Patch Match Tables
         run: |

@@ -223,14 +223,13 @@ jobs:
           meal_days \
           profiles \
           basal_lock \
-          live_activity \
           negative_insulin \
           remote_window
 
           # the final customization listed above CANNOT have a continuation character
           # more customizations can be pasted after this line
           # LoopKit: LoopKitUI\CarbKit\FoodEmojiDataSource.swift: Food Emoji update
-          curl https://github.com/Nightfoxy-org/LoopKit/commit/aeb7296be3a2e20e79832ed30b88280013a9bc3b.patch | git apply -v --directory=LoopKit
+          curl https://github.com/Nightfoxy-org/LoopKit/commit/171064f73fa15e9a3845bc2b786039c8b869fb9c.patch | git apply -v --directory=LoopKit
           
       # Patch Fastlane Match to not print tables
       - name: Patch Match Tables
